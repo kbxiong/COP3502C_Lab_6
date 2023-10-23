@@ -20,6 +20,7 @@ def encode(num):
 def decode(password):
     pass
 
+
 # main function
 def main():
     # encoded password
@@ -62,4 +63,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
