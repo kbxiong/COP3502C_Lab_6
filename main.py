@@ -16,9 +16,14 @@ def encode(num):
     return new_password
 
 
-# decoding password - partner Sahir has to finish this
+# decoded password - Saher Alwani
 def decode(password):
-    pass
+    decoded = ""
+
+    for i in password:
+        decoded += str((int(i) + 10 - 3) % 10)  # Add 10, subtract 3, and keep the last number
+
+    return decoded
 
 
 # main function
@@ -52,8 +57,10 @@ def main():
             print()
         elif option == 2:
             # decode the encoded password and print out original password
-            print(f'The encoded password is {temp_pass}, and the original password is {decode(temp_pass)}.')
+            decoded_num = decode(pass_num)
+            print(f'The encoded password is {temp_pass}, and the original password is {decoded_num}.')
             print()
+            print(decoded_num)
         elif option == 3:
             break
         else:
